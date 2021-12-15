@@ -1,0 +1,76 @@
+{
+  "employees": [
+    {
+      "id": "rirani",
+      "jobTitleName": "Developer",
+      "firstName": "Romin",
+      "lastName": "Irani",
+      "preferredFullName": "Romin Irani",
+      "employeeCode": "E1",
+      "region": "CA",
+      "phoneNumber": "408-1234567",
+      "emailAddress": "romin.k.irani@gmail.com"
+    },
+    {
+      "id": "nirani",
+      "jobTitleName": "Developer",
+      "firstName": "Neil",
+      "lastName": "Irani",
+      "preferredFullName": "Neil Irani",
+      "employeeCode": "E2",
+      "region": "CA",
+      "phoneNumber": "408-1111111",
+      "emailAddress": "neilrirani@gmail.com"
+    },
+    {
+      "id": "hello",
+      "jobTitleName": "web developer",
+      "firstName": "Jian",
+      "lastName": "Zhang",
+      "preferredFullName": "Jian Zhang",
+      "region": "CT",
+      "phoneNumber": "123456789",
+      "emailAddress": "123 st"
+    },
+    {
+      "id": "test1",
+      "jobTitleName": "developer",
+      "firstName": "john",
+      "lastName": "yo",
+      "preferredFullName": "johnjohn",
+      "region": "ct",
+      "phoneNumber": "123",
+      "emailAddress": "adresss"
+    },
+    {
+      "id": "haha",
+      "jobTitleName": "works",
+      "firstName": "sdf",
+      "lastName": "ssss",
+      "preferredFullName": "aaaaa",
+      "region": "cccc",
+      "phoneNumber": "dddd",
+      "emailAddress": "aaaa"
+    },
+    {
+      "id": "test 5",
+      "jobTitleName": "asdf",
+      "firstName": "asdf",
+      "lastName": "asdf",
+      "preferredFullName": "",
+      "region": "",
+      "phoneNumber": "",
+      "emailAddress": ""
+    },
+    {
+      "id": "test6",
+      "jobTitleName": "66",
+      "firstName": "666",
+      "lastName": "666",
+      "preferredFullName": "666",
+      "region": "666",
+      "phoneNumber": "6666",
+      "emailAddress": "6666666"
+    }
+  ]
+}

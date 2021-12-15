@@ -1,38 +1,226 @@
-.App {
-  text-align: center;
+
+body{
+  background-color: rgb(68, 22, 112);
+}
+.card{
+  background-color: aquamarine;
+  min-width:300px;
+  margin: 20px;
+  border-radius: 10px;
+}
+.card > h4 {
+  padding:0 0.5rem
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card> button{
+  padding:0.8rem;
+  width:100%;
+  background-color: burlywood;
+  margin:0 auto;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.container{
+  overflow-x: scroll;
+  height:70vh;
+  display:flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.form-style{
+	font: 95% Arial, Helvetica, sans-serif;
+	max-width: 400px;
+	margin: 10px auto;
+	padding: 16px;
+	background: #F7F7F7;
+  position: absolute;
+  left:22%;
+}
+.form-style h1{
+	background: #43D1AF;
+	padding: 20px 0;
+	font-size: 140%;
+	font-weight: 300;
+	text-align: center;
+	color: #fff;
+	margin: -16px -16px 16px -16px;
+}
+.form-style input[type="text"],
+.form-style input[type="date"],
+.form-style input[type="datetime"],
+.form-style input[type="email"],
+.form-style input[type="number"],
+.form-style input[type="search"],
+.form-style input[type="time"],
+.form-style input[type="url"],
+.form-style textarea,
+.form-style select
+{
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	background: #fff;
+	margin-bottom: 4%;
+	border: 1px solid #ccc;
+	padding: 3%;
+	color: #555;
+	font: 95% Arial, Helvetica, sans-serif;
+}
+.form-style input[type="text"]:focus,
+.form-style input[type="date"]:focus,
+.form-style input[type="datetime"]:focus,
+.form-style input[type="email"]:focus,
+.form-style input[type="number"]:focus,
+.form-style input[type="search"]:focus,
+.form-style input[type="time"]:focus,
+.form-style input[type="url"]:focus,
+.form-style textarea:focus,
+.form-style select:focus
+{
+	box-shadow: 0 0 5px #43D1AF;
+	padding: 3%;
+	border: 1px solid #43D1AF;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.form-style input[type="submit"],
+.form-style input[type="button"]{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	padding: 3%;
+	background: #43D1AF;
+	border-bottom: 2px solid #30C29E;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;
+	color: #fff;
+}
+.form-style input[type="submit"]:hover,
+.form-style input[type="button"]:hover{
+	background: #2EBC99;
+}
+
+.addUserButton{
+  position: absolute;
+  display: inline-block;
+  padding: 5px 10px;
+  color:pink;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  margin-right: 50px;
+  margin-top: 50px;
+  left:80%;
+}
+
+.addUserButton:hover{
+  background: pink;
+   color: #050801;
+  box-shadow: 0 0 1px pink,
+              0 0 5px pink,
+              0 0 10px pink,
+              0 0 100px pink;
+   -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+
+
+.addUserButton span{
+  position: absolute;
+  display: block;
+}
+.addUserButton span:nth-child(1){
+  top:-10px;
+  width: 100%;
+  height: 2px;
+  /* animation: animate1 1s linear infinite;
+  background: linear-gradient(90deg,transparent, pink); */
+}
+
+.addUserButton:hover span:nth-child(1){
+  animation: animate1 1s linear infinite;
+  background: linear-gradient(90deg,transparent, pink);
+}
+.addUserButton:hover span:nth-child(2){
+  background: linear-gradient(180deg,transparent, pink);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+.addUserButton:hover span:nth-child(3){
+  background: linear-gradient(270deg,transparent, pink);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.50s;
+}
+.addUserButton:hover span:nth-child(4){
+   background: linear-gradient(360deg,transparent, pink);
+   animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes animate1{
+  0%{
+      left: -100%;
   }
-  to {
-    transform: rotate(360deg);
+  50%,100%{
+      left: 100%;
+  }
+}
+
+.addUserButton span:nth-child(2){
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  /* background: linear-gradient(180deg,transparent, pink); */
+  /* animation: animate2 1s linear infinite;
+  animation-delay: 0.25s; */
+}
+@keyframes animate2{
+  0%{
+      top: -100%;
+  }
+  50%,100%{
+      top: 100%;
+  }
+}
+.addUserButton span:nth-child(3){
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  /* background: linear-gradient(270deg,transparent, pink); */
+  /* animation: animate3 1s linear infinite;
+  animation-delay: 0.50s; */
+}
+@keyframes animate3{
+  0%{
+      right: -100%;
+  }
+  50%,100%{
+      right: 100%;
+  }
+}
+
+
+.addUserButton span:nth-child(4){
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  /* background: linear-gradient(360deg,transparent, pink); */
+  /* animation: animate4 1s linear infinite;
+  animation-delay: 0.75s; */
+}
+@keyframes animate4{
+  0%{
+      bottom: -100%;
+  }
+  50%,100%{
+      bottom: 100%;
   }
 }
