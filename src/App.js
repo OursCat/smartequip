@@ -21,7 +21,9 @@ class App extends React.Component {
     })
   }
   delete(item){
+    //delete when click on the delete button
     fetch(`http://localhost:5000/employees/${item}`,{method:'DELETE'}).then(data => data.json()).then(item =>{
+      //update the state after delete the item
       fetch('http://localhost:5000/employees',{method:'GET'}).then(data => data.json()).then(item =>{
       this.setState({data:item})
     })
@@ -29,6 +31,7 @@ class App extends React.Component {
     })
   }
   handleSubmit(e){
+    //getting data from child component
     let id = e.target[0].value;
     let jobTitleName = e.target[1].value;
     let firstName = e.target[2].value;
@@ -40,6 +43,7 @@ class App extends React.Component {
     let newUser = {
       id,jobTitleName,firstName,lastName,preferredFullName,region,phoneNumber,emailAddress
     }
+    //do a post request to add data into jason file
     fetch(`http://localhost:5000/employees/`,{method:'POST', body:JSON.stringify(newUser), headers:{"Content-type": "application/json; charset=UTF-8"}}).then(()=>{
       fetch('http://localhost:5000/employees',{method:'GET'}).then(data => data.json()).then(item =>{
       this.setState({data:item})
